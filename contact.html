@@ -1,33 +1,226 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact Wild Ember Digital about a website project." />
-  <title>Contact | Wild Ember Digital</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark"></span><span><strong>Wild Ember</strong><small>Digital</small></span></a><button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button><nav id="main-nav" class="main-nav"><a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="about.html">About</a><a class="active" href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Start a Project</a></nav></div></header>
-<main>
-<section class="page-hero"><div class="container narrow"><p class="eyebrow">Contact</p><h1>Tell me about your project.</h1><p>You do not need to know all the technical details. Just tell me about the business and what you would like the website to do.</p></div></section>
-<section class="section"><div class="container contact-grid"><aside class="contact-panel"><p class="eyebrow">Before you enquire</p><h2>What helps me prepare a useful quote?</h2><ul class="tick-list compact"><li>Your business or project name</li><li>Whether you already have a website</li><li>Roughly how many pages you need</li><li>The main goal of the website</li><li>Any deadline you are working toward</li></ul><p><strong>Email:</strong><br /><a href="mailto:hello@wildemberdigital.ie">hello@wildemberdigital.ie</a></p></aside>
-<form class="contact-form" name="project-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="project-enquiry" />
-<p class="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
-<div class="form-grid"><label>Full name<input type="text" name="name" autocomplete="name" required /></label><label>Email address<input type="email" name="email" autocomplete="email" required /></label></div>
-<label>Business name<input type="text" name="business-name" /></label>
-<div class="form-grid"><label>Type of project<select name="project-type"><option>New brochure website</option><option>Landing page</option><option>Website refresh</option><option>Updates to an existing site</option><option>Not sure yet</option></select></label><label>Approximate number of pages<select name="page-count"><option>1 page</option><option>2–3 pages</option><option>4–5 pages</option><option>6+ pages</option><option>Not sure yet</option></select></label></div>
-<label>Current website, if applicable<input type="url" name="current-website" placeholder="https://" /></label>
-<label>Tell me about the project<textarea name="message" rows="7" required placeholder="What does the business do, what pages do you need and what should visitors be able to do?"></textarea></label>
-<label class="checkbox-row"><input type="checkbox" required /><span>I have read the <a href="privacy.html">Privacy Policy</a> and understand my information will be used to respond to this enquiry.</span></label>
-<button class="btn btn-primary" type="submit">Send Enquiry</button>
-</form></div></section>
-</main>
-<footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark"></span><span><strong>Wild Ember</strong><small>Digital</small></span></a><p>Web design for small businesses across Ireland.</p></div><div><h3>Explore</h3><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div><h3>Information</h3><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div></div><div class="container footer-bottom"><p>© <span id="year"></span> Wild Ember Digital.</p></div></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact Wild Ember Digital about a website project."
+    />
+    <title>Contact | Wild Ember Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark"></span
+          ><span><strong>Wild Ember</strong><small>Digital</small></span></a
+        ><button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="sr-only">Open navigation</span><span></span><span></span
+          ><span></span>
+        </button>
+        <nav id="main-nav" class="main-nav">
+          <a href="index.html">Home</a><a href="portfolio.html">Portfolio</a
+          ><a href="services.html">Services</a><a href="about.html">About</a
+          ><a class="active" href="contact.html">Contact</a
+          ><a class="nav-cta" href="contact.html">Start a Project</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Contact</p>
+          <h1>Tell me about your project.</h1>
+          <p>
+            You do not need to know all the technical details. Just tell me
+            about the business and what you would like the website to do.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container contact-grid">
+          <aside class="contact-panel">
+            <p class="eyebrow">Before you enquire</p>
+            <h2>What helps me prepare a useful quote?</h2>
+            <ul class="tick-list compact">
+              <li>Your business or project name</li>
+              <li>Whether you already have a website</li>
+              <li>Roughly how many pages you need</li>
+              <li>The main goal of the website</li>
+              <li>Any deadline you are working toward</li>
+            </ul>
+            <p>
+              <strong>Email:</strong><br /><a
+                href="mailto:wildemberdigital@gmail.com"
+                >wildemberdigital@gmail.com</a
+              >
+            </p>
+          </aside>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/meeyzpjr"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Wild Ember Digital Project Enquiry"
+            />
+
+            <input
+              type="hidden"
+              name="_next"
+              value="https://wildemberdigital.ie/thank-you.html"
+            />
+
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              class="hidden-field"
+            />
+            <div class="form-grid">
+              <label>
+                Full name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+
+              <label>
+                Email address
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+            </div>
+
+            <label>
+              Business name
+              <input type="text" name="business" autocomplete="organization" />
+            </label>
+
+            <div class="form-grid">
+              <label>
+                Type of project
+                <select name="project_type">
+                  <option value="New brochure website">
+                    New brochure website
+                  </option>
+                  <option value="Landing page">Landing page</option>
+                  <option value="Website refresh">Website refresh</option>
+                  <option value="Updates to an existing site">
+                    Updates to an existing site
+                  </option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </label>
+
+              <label>
+                Approximate number of pages
+                <select name="page_count">
+                  <option value="1 page">1 page</option>
+                  <option value="2–3 pages">2–3 pages</option>
+                  <option value="4–5 pages">4–5 pages</option>
+                  <option value="6+ pages">6+ pages</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Current website (if applicable)
+              <input type="url" name="current_website" placeholder="https://" />
+            </label>
+
+            <label>
+              Tell me about the project
+              <textarea
+                name="message"
+                rows="7"
+                required
+                placeholder="What does the business do, what pages do you need and what should visitors be able to do?"
+              ></textarea>
+            </label>
+
+            <!-- Honeypot spam field -->
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              class="hidden-field"
+            />
+
+            <!-- Optional subject line -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Wild Ember Digital Project Enquiry"
+            />
+
+            <label class="checkbox-row">
+              <input type="checkbox" required />
+              <span>
+                I have read the
+                <a href="privacy.html">Privacy Policy</a>
+                and understand my information will be used to respond to this
+                enquiry.
+              </span>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo-wrap">
+            <img
+              src="images/logo.png"
+              alt="Wild Ember Digital"
+              class="footer-logo"
+            />
+          </a>
+
+          <p>Web design for small businesses across Ireland.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Information</h3>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="mailto:wildemberdigital@gmail.com"
+            >wildemberdigital@gmail.com</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Wild Ember Digital.</p>
+      </div>
+    </footer>
+  </body>
 </html>
